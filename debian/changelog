@@ -1,0 +1,5 @@
+imx-gpu-mali (50-1+toradex1) bookworm; urgency=medium
+
+  * Initial packaging
+
+ -- Leonardo Held <leonardo.held@toradex.com>  Thu, 06 Feb 2025 16:38:58 -0300

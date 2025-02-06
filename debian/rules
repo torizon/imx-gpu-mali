@@ -1,0 +1,28 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+# Uncomment this to turn on verbose mode.
+export DH_VERBOSE=1
+
+DEB_BUILD_OPTIONS=noautodbgsym
+
+FILENAME="mali-imx-r50.0-39604c3"
+URL="https://www.nxp.com/lgfiles/NMG/MAD/YOCTO/$(FILENAME).bin"
+
+LIBVULKAN_VERSION=1.2.1
+LIBVULKAN_VERSION_MAJOR=1
+
+%:
+	dh $@
+
+override_dh_auto_configure:
+	wget $(URL) && chmod +x $(FILENAME).bin
+	./$(FILENAME).bin --auto-accept
+	mv $(FILENAME)/* .
+	rm -rf $(FILENAME)
+
+override_dh_strip_nondeterminism:
+
+override_dh_strip:
+
+# override_dh_makeshlibs:
