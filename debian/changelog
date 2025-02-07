@@ -1,3 +1,9 @@
+imx-gpu-mali (50-1+toradex2) bookworm; urgency=medium
+
+  * Don't conflict with Debian's -dev mesa packages
+
+ -- Leonardo Held <leonardo.held@toradex.com>  Fri, 07 Feb 2025 12:30:36 -0300
+
 imx-gpu-mali (50-1+toradex1) bookworm; urgency=medium
 
   * Initial packaging
